@@ -52,7 +52,7 @@ def handle_message(event):
 		r = 'I am your assistant'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=''))#使用者傳來的訊息 回傳
+        TextSendMessage(text=r))#使用者傳來的訊息 回傳
 
 
 if __name__ == "__main__":
