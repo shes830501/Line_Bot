@@ -49,8 +49,8 @@ def handle_message(event):
         )
 
         line_bot_api.reply_message(
-        event.reply_token,
-        sticker_message)#使用者傳來的訊息 回傳
+            event.reply_token,
+            sticker_message)#使用者傳來的訊息 回傳
 
         return
 
