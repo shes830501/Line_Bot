@@ -39,9 +39,20 @@ def callback(): #用瀏覽器發送網址(訊號)過來
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+	msg = event.message.text
+	r = '抱歉 能再說一次嗎'
+
+	if msg in ['hi', 'Hi']:
+		r = 'Hi'
+	elif '吃飯' in msg:
+		r = '還沒 您呢?'
+	elif '誰' in msg:
+		r = '我是您的小幫手'
+	elif 'who' or 'Who' in msg:
+		r = 'I am your assistant'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))#使用者傳來的訊息 回傳
+        TextSendMessage(text=''))#使用者傳來的訊息 回傳
 
 
 if __name__ == "__main__":
