@@ -48,7 +48,7 @@ def handle_message(event):
         r = '還沒 您呢?'
     elif '誰' in msg:
         r = '我是您的小幫手'
-    elif 'WHO' in msg.lower():
+    elif 'who' in msg.lower():
         r = 'I am your assistant'
 
     line_bot_api.reply_message(
