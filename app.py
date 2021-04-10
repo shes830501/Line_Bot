@@ -43,7 +43,7 @@ def handle_message(event):
     r = '抱歉 能再說一次嗎'
 
     if '貼圖' in msg:
-    	sticker_message = StickerSendMessage(
+        sticker_message = StickerSendMessage(
             package_id='1',
             sticker_id='1'
         )
